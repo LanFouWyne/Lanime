@@ -5,6 +5,8 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://Lanime.github.io',
+  
   env: {
     schema: {
       API_URL: envField.string({
