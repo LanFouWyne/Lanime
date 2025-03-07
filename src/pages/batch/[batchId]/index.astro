@@ -14,7 +14,7 @@ import DownloadLink from "@components/DownloadLink.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const { batchId } = Astro.params;
 const batchInfo = await batchInfoService({ batchId: batchId! });
@@ -106,9 +106,6 @@ const { data } = batchInfo;
               <WidgetTitle title="Link Download" />
               <DownloadLink anime={{ downloadUrl: data.downloadUrl }} />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

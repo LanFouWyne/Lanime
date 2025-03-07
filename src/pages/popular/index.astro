@@ -12,7 +12,7 @@ import AnimeList2 from "@components/AnimeList2.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const page = Astro.url.searchParams.get("page");
 const popular = await popularService({ page });
@@ -42,9 +42,6 @@ const popular = await popularService({ page });
               />
               <Pagination pagination={popular.pagination} />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

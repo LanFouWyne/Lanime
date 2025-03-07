@@ -13,7 +13,7 @@ import Search from "@components/Search.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const q = Astro.url.searchParams.get("q");
 const page = Astro.url.searchParams.get("page");
@@ -77,9 +77,6 @@ const search = await searchService({ q, page });
                 options={{ qQueryParam: q }}
               />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

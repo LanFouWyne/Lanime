@@ -12,7 +12,7 @@ import Pagination from "@components/Pagination.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const page = Astro.url.searchParams.get("page");
 const completed = await completedService({ page });
@@ -42,9 +42,6 @@ const completed = await completedService({ page });
               />
               <Pagination pagination={completed.pagination} />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

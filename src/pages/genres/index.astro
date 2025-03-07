@@ -11,7 +11,7 @@ import animeConfig from "@configs/animeConfig";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const genre = await daftarGenreService();
 ---
@@ -39,9 +39,6 @@ const genre = await daftarGenreService();
                 }}
               />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

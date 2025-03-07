@@ -1,7 +1,7 @@
 import { API_URL } from "astro:env/server";
 
 interface AnimeConfig {
-  wajiknime: {
+  lanime: {
     siteName: string;
     description: string;
     logo: string;
@@ -9,22 +9,22 @@ interface AnimeConfig {
     image: string;
   };
 
-  wajikAnimeApi: {
+  lanimeApi: {
     apiUrl: string;
     baseUrlPath: string;
   };
 }
 
 const animeConfig: AnimeConfig = {
-  wajiknime: {
-    siteName: "Wajiknime",
-    description: "Nonton anime gratis ga pake karcis hanya di Wajiknime",
+  lanime: {
+    siteName: "Lanime",
+    description: "Nonton anime gratis ga pake karcis hanya di Lanime",
     logo: "/images/logo.png",
     favicon: "/favicon.png",
-    image: "/images/wajiknime.jpg",
+    image: "/images/lanime.jpg",
   },
 
-  wajikAnimeApi: {
+  lanimeApi: {
     apiUrl: API_URL,
     baseUrlPath: "/samehadaku",
   },

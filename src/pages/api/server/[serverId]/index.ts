@@ -3,7 +3,7 @@ import animeConfig from "@configs/animeConfig";
 import generateUrlPath from "@utils/generateUrlPath";
 
 const {
-  wajikAnimeApi: { apiUrl, baseUrlPath },
+  lanimeApi: { apiUrl, baseUrlPath },
 } = animeConfig;
 
 export const POST: APIRoute = async ({ params }) => {

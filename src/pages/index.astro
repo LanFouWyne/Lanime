@@ -13,7 +13,7 @@ import AnimeList3 from "@components/AnimeList3.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName, description, image },
+  lanime: { siteName, description, image },
 } = animeConfig;
 const home = await homeService();
 ---
@@ -64,15 +64,6 @@ const home = await homeService();
                 }}
               />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Anime Movie" href="/movies" />
-              <AnimeList3
-                anime={{
-                  list: home.data.movie.animeList,
-                  baseUrlPath: "/anime",
-                }}
-              />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

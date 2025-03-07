@@ -11,7 +11,7 @@ interface Payload<T> {
 }
 
 const {
-  wajikAnimeApi: { apiUrl, baseUrlPath },
+  lanimeApi: { apiUrl, baseUrlPath },
 } = animeConfig;
 
 export default async function skuy<T>(pathname: string): Promise<Payload<T>> {

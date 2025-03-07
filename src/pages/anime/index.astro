@@ -11,7 +11,7 @@ import AnimeList0 from "@components/AnimeList0.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const anime = await daftarAnimeService();
 ---
@@ -39,9 +39,6 @@ const anime = await daftarAnimeService();
                 }}
               />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

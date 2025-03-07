@@ -12,7 +12,7 @@ import Pagination from "@components/Pagination.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const { genreId } = Astro.params;
 const page = Astro.url.searchParams.get("page");
@@ -43,9 +43,6 @@ const animeByGenre = await animeByGenreService({ genreId: genreId! }, { page });
               />
               <Pagination pagination={animeByGenre.pagination} />
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );

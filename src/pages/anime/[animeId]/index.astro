@@ -14,7 +14,7 @@ import AnimeDetails from "@components/AnimeDetails.astro";
 import Error from "@components/Error.astro";
 
 const {
-  wajiknime: { siteName },
+  lanime: { siteName },
 } = animeConfig;
 const { animeId } = Astro.params;
 const animeInfo = await animeInfoService({ animeId: animeId! });
@@ -156,9 +156,6 @@ const { data } = animeInfo;
                 })}
               </div>
             </Content>
-            <Sidebar>
-              <WidgetTitle title="Sidebar" />
-            </Sidebar>
           </Sesepuh>
         </Layout>
       );
