@@ -25,23 +25,53 @@ const home = await homeService();
       const title = `${siteName} - Nonton Streaming & Download Anime Sub Indo Subtitle Indonesia Gratis`;
 
       return (
-        <Layout>
-          <Carousel />
+        <Layout
+          seo={{
+            title,
+            description,
+            openGraph: {
+              basic: {
+                title,
+                image: `${Astro.url.origin + image}`,
+                type: "website",
+              },
+              optional: {
+                siteName,
+              },
+            },
+          }}
+        >
+          <Carousel 
+            anime={{
+              list: home.data.recent.animeList.slice(0, 5),
+              baseUrlPath: "/anime",
+            }}
+          />
           <Breadcrumb />
           
-          <!-- Iklan di bawah breadcrumb -->
+          {/* Iklan di bawah breadcrumb */}
           <AdBanner slot="1234567890" format="horizontal" />
           
           <Sesepuh>
             <Content>
               <WidgetTitle title="Episode Terbaru" href="/recent" />
-              <AnimeList1 />
+              <AnimeList1 
+                anime={{
+                  list: home.data.recent.animeList,
+                  baseUrlPath: "/anime",
+                }}
+              />
               
-              <!-- Iklan di tengah konten -->
+              {/* Iklan di tengah konten */}
               <AdBanner slot="0987654321" />
               
               <WidgetTitle title="Download Batch Anime" href="/batch" />
-              <AnimeList1 />
+              <AnimeList1 
+                anime={{
+                  list: home.data.batch.batchList,
+                  baseUrlPath: "/batch",
+                }}
+              />
             </Content>
           </Sesepuh>
         </Layout>
