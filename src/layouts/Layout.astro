@@ -24,35 +24,15 @@ const seo: SEOProps = {
 
 <html lang="en">
   <head>
-    <!-- META TAG UTAMA -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <!-- MENGATASI IMAGE FORBIDDEN DI LOCALHOST -->
-    <meta name="referrer" content="no-referrer" />
-
-    <!-- LAIN2 -->
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-    <link rel="icon" href={favicon} />
-
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- FLOWBITE -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- TAG-TAG RAMAH SEO CUY -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href={favicon} />
     <SEO {...seo} />
-
+    
+    <!-- Google AdSense Verification Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6082615069657035"
+     crossorigin="anonymous"></script>
+    
     <!-- <title>Judul Halaman | Kata Kunci Utama - Nama Situs</title> -->
     
     <!-- Google AdSense -->
