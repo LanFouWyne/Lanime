@@ -10,7 +10,7 @@ interface Props {
 }
 
 const {
-  lanime: { siteName, description, favicon },
+  linime: { siteName, description, favicon },
 } = animeConfig;
 
 // SEO BAWAAN
@@ -54,6 +54,10 @@ const seo: SEOProps = {
     <SEO {...seo} />
 
     <!-- <title>Judul Halaman | Kata Kunci Utama - Nama Situs</title> -->
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    
   </head>
   <body
     class="font-inter relative bg-zinc-200 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-50"

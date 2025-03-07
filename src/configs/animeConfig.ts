@@ -1,7 +1,7 @@
 import { API_URL } from "astro:env/server";
 
 interface AnimeConfig {
-  lanime: {
+  linime: {
     siteName: string;
     description: string;
     logo: string;
@@ -9,22 +9,22 @@ interface AnimeConfig {
     image: string;
   };
 
-  lanimeApi: {
+  linimeApi: {
     apiUrl: string;
     baseUrlPath: string;
   };
 }
 
 const animeConfig: AnimeConfig = {
-  lanime: {
-    siteName: "Lanime",
-    description: "Nonton anime gratis ga pake karcis hanya di Lanime",
+  linime: {
+    siteName: "Linime",
+    description: "Nonton anime gratis ga pake karcis hanya di linime",
     logo: "/images/logo.png",
     favicon: "/favicon.png",
-    image: "/images/lanime.jpg",
+    image: "/images/linime.jpg",
   },
 
-  lanimeApi: {
+  linimeApi: {
     apiUrl: API_URL,
     baseUrlPath: "/samehadaku",
   },

@@ -14,7 +14,7 @@ import DownloadLink from "@components/DownloadLink.astro";
 import Error from "@components/Error.astro";
 
 const {
-  lanime: { siteName },
+  linime: { siteName },
 } = animeConfig;
 const { batchId } = Astro.params;
 const batchInfo = await batchInfoService({ batchId: batchId! });

@@ -12,7 +12,7 @@ import AnimeList2 from "@components/AnimeList2.astro";
 import Error from "@components/Error.astro";
 
 const {
-  lanime: { siteName },
+  linime: { siteName },
 } = animeConfig;
 const page = Astro.url.searchParams.get("page");
 const popular = await popularService({ page });

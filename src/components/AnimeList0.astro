@@ -1,12 +1,12 @@
 ---
-import type { AllAnimes } from "@services/animeService";
+import type { Allinimes } from "@services/animeService";
 import generateUrlPath from "@utils/generateUrlPath";
 import SearchIcon from "./icons/SearchIcon.astro";
 import WidgetTitle from "./WidgetTitle.astro";
 
 interface Props {
   anime: {
-    list: AllAnimes["list"];
+    list: Allinimes["list"];
     baseUrlPath: string;
   };
 }

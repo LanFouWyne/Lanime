@@ -14,7 +14,7 @@ import AnimeDetails from "@components/AnimeDetails.astro";
 import Error from "@components/Error.astro";
 
 const {
-  lanime: { siteName },
+  linime: { siteName },
 } = animeConfig;
 const { animeId } = Astro.params;
 const animeInfo = await animeInfoService({ animeId: animeId! });

@@ -1,6 +1,6 @@
-# lanime
+# linime
 
-lanime adalah UI/Front End dari [wajik-anime-api](https://github.com/wajik45/wajik-anime-api/tree/8c61097) dimana user bisa nonton, streaming, & download anime sub indo/subtitle indo secara online gratis gapake karcis cuyy...
+linime adalah UI/Front End dari [wajik-anime-api](https://github.com/wajik45/wajik-anime-api/tree/8c61097) dimana user bisa nonton, streaming, & download anime sub indo/subtitle indo secara online gratis gapake karcis cuyy...
 
 - Teknologi : Astro, Node, TypeScript, Tailwind, Flowbite
 - Api : [wajik-anime-api](https://github.com/wajik45/wajik-anime-api/tree/8c61097)
@@ -10,13 +10,13 @@ lanime adalah UI/Front End dari [wajik-anime-api](https://github.com/wajik45/waj
 1. clone atau download repo
 
 ```sh
-git clone https://github.com/wajik45/lanime.git
+git clone https://github.com/wajik45/linime.git
 ```
 
 2. masuk ke repo
 
 ```sh
-cd lanime
+cd linime
 ```
 
 3. install dependensi

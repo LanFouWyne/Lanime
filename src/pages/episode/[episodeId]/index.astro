@@ -14,7 +14,7 @@ import VideoPlayer from "@components/VideoPlayer.astro";
 import Error from "@components/Error.astro";
 
 const {
-  lanime: { siteName },
+  linime: { siteName },
 } = animeConfig;
 const { episodeId } = Astro.params;
 const episode = await episodeService({ episodeId: episodeId! });

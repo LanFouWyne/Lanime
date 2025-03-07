@@ -11,9 +11,10 @@ import Sidebar from "@components/Sidebar.astro";
 import AnimeList1 from "@components/AnimeList1.astro";
 import AnimeList3 from "@components/AnimeList3.astro";
 import Error from "@components/Error.astro";
+import AdBanner from "@components/AdBanner.astro";
 
 const {
-  lanime: { siteName, description, image },
+  linime: { siteName, description, image },
 } = animeConfig;
 const home = await homeService();
 ---
@@ -24,45 +25,23 @@ const home = await homeService();
       const title = `${siteName} - Nonton Streaming & Download Anime Sub Indo Subtitle Indonesia Gratis`;
 
       return (
-        <Layout
-          seo={{
-            title,
-            description,
-            openGraph: {
-              basic: {
-                title,
-                image: `${Astro.url.origin + image}`,
-                type: "website",
-              },
-              optional: {
-                siteName,
-              },
-            },
-          }}
-        >
-          <Carousel
-            anime={{
-              list: home.data.recent.animeList.slice(0, 5),
-              baseUrlPath: "/anime",
-            }}
-          />
+        <Layout>
+          <Carousel />
           <Breadcrumb />
+          
+          <!-- Iklan di bawah breadcrumb -->
+          <AdBanner slot="1234567890" format="horizontal" />
+          
           <Sesepuh>
             <Content>
               <WidgetTitle title="Episode Terbaru" href="/recent" />
-              <AnimeList1
-                anime={{
-                  list: home.data.recent.animeList,
-                  baseUrlPath: "/anime",
-                }}
-              />
+              <AnimeList1 />
+              
+              <!-- Iklan di tengah konten -->
+              <AdBanner slot="0987654321" />
+              
               <WidgetTitle title="Download Batch Anime" href="/batch" />
-              <AnimeList1
-                anime={{
-                  list: home.data.batch.batchList,
-                  baseUrlPath: "/batch",
-                }}
-              />
+              <AnimeList1 />
             </Content>
           </Sesepuh>
         </Layout>
