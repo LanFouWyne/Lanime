@@ -12,6 +12,7 @@ export default defineConfig({
       API_URL: envField.string({
         access: "public",
         context: "server",
+        default: "https://wajik-anime-api.vercel.app/"
       }),
     },
   },
