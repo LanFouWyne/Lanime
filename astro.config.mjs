@@ -1,11 +1,13 @@
 // @ts-check
 import { defineConfig, envField } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import node from "@astrojs/node";
+// Hapus import node karena kita tidak akan menggunakannya
+// import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Lanime.github.io',
+  site: 'https://lanfouwyne.github.io',
+  base: '/Lanime.github.io',
   
   env: {
     schema: {
@@ -17,11 +19,13 @@ export default defineConfig({
     },
   },
 
-  output: "server",
+  // Ubah output menjadi "static" untuk GitHub Pages
+  output: "static",
 
-  adapter: node({
-    mode: "standalone",
-  }),
+  // Hapus adapter node karena tidak diperlukan untuk static site
+  // adapter: node({
+  //   mode: "standalone",
+  // }),
 
   integrations: [tailwind()],
 
