@@ -4,6 +4,7 @@ import { SEO, type SEOProps } from "astro-seo";
 import animeConfig from "@configs/animeConfig";
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
+import GoogleAdsense from "@components/GoogleAdsense.astro";
 
 interface Props {
   seo?: SEOProps;
@@ -35,6 +36,10 @@ const seo: SEOProps = {
 
     <!-- LAIN2 -->
     <link rel="icon" href={favicon} />
+
+    <!-- GOOGLE ADSENSE -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6082615069657035"
+     crossorigin="anonymous"></script>
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,32 +1,26 @@
 ---
+// Add props to make the component more flexible
 interface Props {
-  slot: string;
-  format?: "auto" | "rectangle" | "horizontal" | "vertical";
-  className?: string;
+  adSlot?: string;
+  adFormat?: string;
+  responsive?: boolean;
 }
 
-const { slot, format = "auto", className = "" } = Astro.props;
+const { 
+  adSlot = "1234567890", // Replace with your actual ad slot ID
+  adFormat = "auto",
+  responsive = true 
+} = Astro.props;
 ---
 
-<div class={`ad-container ${className}`}>
-  <ins
-    class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-6082615069657035" 
-    data-ad-slot={slot}
-    data-ad-format={format}
-    data-full-width-responsive="true"
-  ></ins>
+<div class="ad-container my-4">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-6082615069657035"
+       data-ad-slot={adSlot}
+       data-ad-format={adFormat}
+       data-full-width-responsive={responsive}></ins>
   <script is:inline>
-    (adsbygoogle = window.adsbygoogle || []).push({});
+       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
-
-<style>
-  .ad-container {
-    width: 100%;
-    margin: 1rem 0;
-    overflow: hidden;
-    text-align: center;
-  }
-</style>
