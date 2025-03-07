@@ -34,10 +34,6 @@ const seo: SEOProps = {
      crossorigin="anonymous"></script>
     
     <!-- <title>Judul Halaman | Kata Kunci Utama - Nama Situs</title> -->
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-    
   </head>
   <body
     class="font-inter relative bg-zinc-200 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-50"
@@ -114,6 +110,37 @@ const seo: SEOProps = {
 ></script>
 
 <script is:inline>
+  // Initialize carousel when DOM is loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    // Check if carousel elements exist
+    const carouselEl = document.getElementById("default-carousel");
+    if (carouselEl) {
+      try {
+        // Initialize carousel with Flowbite
+        const carousel = new window.Carousel(carouselEl, {}, {
+          defaultPosition: 1,
+          interval: 3000
+        });
+        
+        // Optional: Add custom navigation handling if needed
+        const prevButton = document.querySelector("[data-carousel-prev]");
+        const nextButton = document.querySelector("[data-carousel-next]");
+        
+        if (prevButton) {
+          prevButton.addEventListener("click", () => carousel.prev());
+        }
+        
+        if (nextButton) {
+          nextButton.addEventListener("click", () => carousel.next());
+        }
+      } catch (error) {
+        console.error("Error initializing carousel:", error);
+      }
+    }
+  });
+</script>
+
+<script is:inline>
   // MENGATUR AWAL TEMA
   (function () {
     function isDark() {
@@ -160,13 +187,15 @@ const seo: SEOProps = {
     const leluhurEl = document.getElementById("leluhur");
     const spinnerWrapperEl = document.getElementById("spinner-wrapper");
 
-    leluhurEl.classList.remove("hidden");
-    leluhurEl.classList.add("flex");
-    spinnerWrapperEl.classList.add("hidden");
+    if (leluhurEl && spinnerWrapperEl) {
+      leluhurEl.classList.remove("hidden");
+      leluhurEl.classList.add("flex");
+      spinnerWrapperEl.classList.add("hidden");
+    }
   });
 </script>
 
-<script>
+<script is:inline>
   // MENGATUR PADDING TOP SESUAI DENGAN TINGGI NAVBAR
   function adjustMainPaddingTop() {
     const mainEl = document.getElementById("main");
