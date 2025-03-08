@@ -1,52 +1,32 @@
-# linime
+# Linime
 
-linime adalah UI/Front End dari [wajik-anime-api](https://github.com/wajik45/wajik-anime-api/tree/8c61097) dimana user bisa nonton, streaming, & download anime sub indo/subtitle indo secara online gratis gapake karcis cuyy...
+Linime is a free anime streaming web application that allows users to watch, stream, and download anime with Indonesian subtitles.
 
-- Teknologi : Astro, Node, TypeScript, Tailwind, Flowbite
-- Api : [wajik-anime-api](https://github.com/wajik45/wajik-anime-api/tree/8c61097)
+## Features
 
-## Installasi
+- Stream anime episodes with Indonesian subtitles
+- Download episodes for offline viewing
+- User-friendly interface
+- Responsive design for all devices
 
-1. clone atau download repo
+## Technologies
 
-```sh
-git clone https://github.com/wajik45/linime.git
-```
+- [Astro](https://astro.build/) - Web framework for content-focused websites
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Flowbite](https://flowbite.com/) - UI component library built on Tailwind CSS
 
-2. masuk ke repo
+## Getting Started
 
-```sh
-cd linime
-```
+### Prerequisites
 
-3. install dependensi
+- Node.js (v16 or higher)
+- npm or yarn
 
-```sh
-npm install
-```
+### Installation
 
-4. buat file .env di root directory tulis sesuai dengan isi dari file .env.example
-
-5. menjalankan server mode pengembangan
-
-```sh
-npm run dev
-```
-
-6. build projek
-
-```sh
-npm run build
-```
-
-7. preview projek yang sudah dibuild
-
-```sh
-npm run preview
-```
-
-app ini berjalan di sisi server, secara default menggunakan node sebagai adapternya, selengkapnya liat [disini](https://docs.astro.build/en/guides/on-demand-rendering/#server-adapters), untuk menjalankanya gunakan perintah berikut :
-
-```sh
-node ./dist/server/entry.mjs
-```
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/linime.git
+   cd linime
