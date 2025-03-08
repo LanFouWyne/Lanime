@@ -5,7 +5,7 @@ Linime is a free anime streaming web application that allows users to watch, str
 ## Features
 
 - Stream anime episodes with Indonesian subtitles
-- Download episodes for offline viewing
+- Download episodes with direct links
 - User-friendly interface
 - Responsive design for all devices
 
@@ -28,5 +28,5 @@ Linime is a free anime streaming web application that allows users to watch, str
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/linime.git
+   git clone https://github.com/LanFouWyne/linime.git
    cd linime
